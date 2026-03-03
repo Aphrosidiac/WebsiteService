@@ -1,65 +1,204 @@
-import Image from "next/image";
+import Footer from "./components/Footer";
+import ScrollCards from "./components/ScrollCards";
+
+const clientsRowOne = [
+  {
+    name: "E-Commerce Store", href: "#",
+    bg: "from-indigo-950 to-slate-900", accent: "bg-indigo-500",
+    tag: "Retail", headline: "Shop the latest collection", sub: "Free shipping on orders over RM150",
+  },
+  {
+    name: "SaaS Dashboard", href: "#",
+    bg: "from-sky-950 to-zinc-900", accent: "bg-sky-400",
+    tag: "Analytics", headline: "Track what matters", sub: "Real-time metrics at a glance",
+  },
+  {
+    name: "Mobile App", href: "#",
+    bg: "from-violet-950 to-zinc-900", accent: "bg-violet-400",
+    tag: "iOS & Android", headline: "Your life, organised", sub: "Built for speed and simplicity",
+  },
+  {
+    name: "Landing Page", href: "#",
+    bg: "from-emerald-950 to-zinc-900", accent: "bg-emerald-400",
+    tag: "Marketing", headline: "Convert visitors into customers", sub: "Designed to drive action",
+  },
+  {
+    name: "Blog Platform", href: "#",
+    bg: "from-rose-950 to-zinc-900", accent: "bg-rose-400",
+    tag: "Content", headline: "Stories worth reading", sub: "Clean, readable, and fast",
+  },
+];
+
+const clientsRowTwo = [
+  {
+    name: "Portfolio Site", href: "#",
+    bg: "from-amber-950 to-zinc-900", accent: "bg-amber-400",
+    tag: "Personal", headline: "Work that speaks for itself", sub: "Crafted with intention",
+  },
+  {
+    name: "Restaurant Website", href: "#",
+    bg: "from-orange-950 to-zinc-900", accent: "bg-orange-400",
+    tag: "F&B", headline: "A dining experience online", sub: "Reservations made effortless",
+  },
+  {
+    name: "Real Estate App", href: "#",
+    bg: "from-teal-950 to-zinc-900", accent: "bg-teal-400",
+    tag: "Property", headline: "Find your perfect space", sub: "Thousands of listings, one search",
+  },
+  {
+    name: "Fitness Tracker", href: "#",
+    bg: "from-lime-950 to-zinc-900", accent: "bg-lime-400",
+    tag: "Health", headline: "Your progress, visualised", sub: "Train smarter, not harder",
+  },
+  {
+    name: "Agency Website", href: "#",
+    bg: "from-fuchsia-950 to-zinc-900", accent: "bg-fuchsia-400",
+    tag: "Creative", headline: "Bold ideas. Real results.", sub: "We build brands that last",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="relative min-h-screen overflow-hidden bg-zinc-950 text-slate-200">
+      <div className="aurora-bg" />
+
+      <div className="timeline pointer-events-none absolute -left-3 top-4 z-10 hidden md:block">
+        <div className="ml-[27px] flex h-4 w-4 items-center justify-center rounded-full border border-zinc-300/40 shadow-[0_3px_8px_rgba(0,0,0,0.24)]">
+          <div className="h-2 w-2 rounded-full border border-zinc-300 bg-slate-700" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <svg
+          viewBox="0 0 20 3734"
+          width="20"
+          height="3664"
+          className="timeline-svg ml-4 block"
+          aria-hidden="true"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient
+              id="timeline-gradient"
+              gradientUnits="userSpaceOnUse"
+              x1="0"
+              x2="0"
+              y1="50"
+              y2="50"
+            >
+              <stop stopColor="#18CCFC" stopOpacity="0" />
+              <stop stopColor="#18CCFC" />
+              <stop offset="0.325" stopColor="#6344F5" />
+              <stop offset="1" stopColor="#AE48FF" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M 1 0V -36 l 18 24 V 2987.2 l -8 24V 3734"
+            fill="none"
+            stroke="var(--line-dim)"
+          />
+          <path
+            d="M 1 0V -36 l 18 24 V 2987.2 l -8 24V 3734"
+            fill="none"
+            stroke="url(#timeline-gradient)"
+            strokeWidth="1.25"
+          />
+        </svg>
+      </div>
+
+      <section className="relative flex min-h-screen flex-col items-center justify-center gap-4 px-4 pb-[10vh]">
+        <div className="text-center text-5xl font-bold text-white md:text-7xl">
+          Your website is your first impression.
         </div>
-      </main>
-    </div>
+        <div className="py-4 text-base font-extralight tracking-wide text-zinc-200 md:text-3xl">
+          Make it count, with Fakhrul.
+        </div>
+        <a
+          href="#branding"
+          className="relative flex rounded-full border border-zinc-100/20 bg-black/20 p-px transition duration-500 hover:bg-black/10"
+        >
+          <span className="z-10 flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-white">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              viewBox="0 0 448 512"
+              className="h-4 w-4 animate-bounce text-white/35"
+              aria-hidden="true"
+            >
+              <path d="M246.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 402.7 361.4 265.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-160 160zm160-352l-160 160c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 210.7 361.4 73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3z" />
+            </svg>
+            Scroll down
+          </span>
+          <span className="pointer-events-none absolute inset-0 rounded-full bg-radial from-white/40 to-transparent blur-[2px]" />
+          <span className="pointer-events-none absolute inset-[2px] rounded-full bg-black" />
+        </a>
+      </section>
+
+      <section
+        id="branding"
+        className="relative -mt-[24vh] flex w-full max-w-[100vw] flex-col overflow-hidden pb-40 pt-20 antialiased lg:-mt-[30vh] lg:pt-40"
+      >
+        <div className="relative top-20 w-full bg-gradient-to-t from-transparent from-[1%] via-black to-[99%] pb-40 pt-20 md:pb-80 md:pt-40 lg:top-60">
+          <div className="mx-auto max-w-7xl px-8 md:px-20">
+            <h1 className="text-5xl font-bold text-white md:text-7xl">
+              A strong brand <br /> drives real results
+            </h1>
+            <p className="mt-8 max-w-2xl text-base text-white md:text-xl">
+              Trust is built before the first conversation even happens.
+              <br />
+              <br />
+              We craft digital experiences that communicate credibility,
+              attract the right audience, and convert visitors into loyal customers.
+              <br />
+              <br />
+              Let us handle the pixels — so you can focus on what you do best.
+            </p>
+            <p className="mt-40 text-3xl font-semibold text-zinc-200 md:text-5xl">
+              Our Work
+            </p>
+          </div>
+        </div>
+
+        <ScrollCards rowOne={clientsRowOne} rowTwo={clientsRowTwo} />
+      </section>
+
+      <div className="relative bg-gradient-to-b from-transparent via-zinc-950/80 to-zinc-950">
+      <section className="isolate mx-auto mt-4 w-full max-w-7xl px-8 pb-16 pt-8 text-center md:text-left">
+        <h1 className="text-5xl font-bold text-white md:text-7xl">
+          Crafted to fit your vision,
+          <br />
+          not a template.
+        </h1>
+        <p className="mt-8 max-w-3xl text-base text-white md:text-xl">
+          No two businesses are alike — and neither are the sites we build.
+        </p>
+        <p className="mt-8 max-w-3xl text-base text-white md:text-xl">
+          Every project starts from scratch, shaped around your goals, your audience, and your brand identity.
+        </p>
+        <p className="mt-8 max-w-3xl text-base text-white md:text-xl">
+          Built for speed, security, and a user experience that keeps people coming back.
+        </p>
+        <div className="mt-8">
+          <div className="btn-shine-wrapper">
+          <a
+            href="https://api.whatsapp.com/send/?phone=60139078719&text=Hi+Fakhrul%21+I+want+a+quotation+for+my+website.+&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-zinc-950 px-6 py-3 text-white transition-colors hover:bg-zinc-800"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              className="h-4 w-4 fill-current"
+              aria-hidden="true"
+            >
+              <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+            </svg>
+            Free Consultation
+          </a>
+          </div>
+        </div>
+      </section>
+
+      <Footer dark />
+      </div>
+    </main>
   );
 }
