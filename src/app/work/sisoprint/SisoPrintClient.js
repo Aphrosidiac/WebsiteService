@@ -23,14 +23,7 @@ const screenshots = [
   { file: '17-about-contact.png',    label: 'About & Contact' },
 ];
 
-const stack = [
-  { label: 'React 19', color: 'bg-cyan-500/10 text-cyan-300 border-cyan-500/20' },
-  { label: 'TypeScript', color: 'bg-blue-500/10 text-blue-300 border-blue-500/20' },
-  { label: 'Vite 6', color: 'bg-violet-500/10 text-violet-300 border-violet-500/20' },
-  { label: 'Tailwind CSS 4', color: 'bg-sky-500/10 text-sky-300 border-sky-500/20' },
-  { label: 'React Router v7', color: 'bg-rose-500/10 text-rose-300 border-rose-500/20' },
-  { label: 'Playwright', color: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20' },
-];
+const stack = ['React 19', 'TypeScript', 'Vite 6', 'Tailwind CSS 4', 'React Router v7', 'Playwright'];
 
 function Lightbox({ index, onClose, onPrev, onNext }) {
   const s = screenshots[index];
@@ -135,25 +128,32 @@ export default function SisoPrintClient() {
 
       {/* Hero */}
       <section className="isolate relative mx-auto max-w-7xl px-8 pb-16 pt-12 md:px-20">
-        <span className="text-xs font-semibold uppercase tracking-widest text-blue-400">
-          Print Service Platform
-        </span>
-        <h1 className="mt-3 text-5xl font-bold text-white md:text-7xl">SisoPrint</h1>
-        <p className="mt-5 max-w-2xl text-base text-zinc-400 md:text-lg">
-          A full-featured online print service platform — browse products, upload artwork,
-          manage orders, and track deliveries, all from one clean interface.
-        </p>
+        <div className="relative inline-block max-w-2xl">
+          {/* Soft dark glow behind text */}
+          <div className="pointer-events-none absolute -inset-x-12 -inset-y-8 rounded-full bg-zinc-950/80 blur-3xl" />
 
-        {/* Tech stack */}
-        <div className="mt-8 flex flex-wrap gap-2">
-          {stack.map((s) => (
-            <span
-              key={s.label}
-              className={`rounded-full border px-3 py-1 text-xs font-medium ${s.color}`}
-            >
-              {s.label}
+          <div className="relative">
+            <span className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
+              Print Service Platform
             </span>
-          ))}
+            <h1 className="mt-3 text-5xl font-bold text-white md:text-7xl">SisoPrint</h1>
+            <p className="mt-5 text-base text-zinc-400 md:text-lg">
+              A full-featured online print service platform — browse products, upload artwork,
+              manage orders, and track deliveries, all from one clean interface.
+            </p>
+
+            {/* Tech stack */}
+            <div className="mt-8 flex flex-wrap gap-2">
+              {stack.map((s) => (
+                <span
+                  key={s}
+                  className="rounded-full border border-zinc-700/50 bg-zinc-800/50 px-3 py-1 text-xs font-medium text-zinc-400"
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
