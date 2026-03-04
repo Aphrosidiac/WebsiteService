@@ -21,36 +21,6 @@ const projects = [
     bg: "from-sky-950 to-zinc-900", accent: "bg-sky-400",
     tag: "Analytics", headline: "Track what matters", sub: "Real-time metrics at a glance",
   },
-  {
-    name: "Mobile App", href: "#",
-    bg: "from-violet-950 to-zinc-900", accent: "bg-violet-400",
-    tag: "iOS & Android", headline: "Your life, organised", sub: "Built for speed and simplicity",
-  },
-  {
-    name: "Landing Page", href: "#",
-    bg: "from-emerald-950 to-zinc-900", accent: "bg-emerald-400",
-    tag: "Marketing", headline: "Convert visitors into customers", sub: "Designed to drive action",
-  },
-  {
-    name: "Blog Platform", href: "#",
-    bg: "from-rose-950 to-zinc-900", accent: "bg-rose-400",
-    tag: "Content", headline: "Stories worth reading", sub: "Clean, readable, and fast",
-  },
-  {
-    name: "Portfolio Site", href: "#",
-    bg: "from-amber-950 to-zinc-900", accent: "bg-amber-400",
-    tag: "Personal", headline: "Work that speaks for itself", sub: "Crafted with intention",
-  },
-  {
-    name: "Restaurant Website", href: "#",
-    bg: "from-orange-950 to-zinc-900", accent: "bg-orange-400",
-    tag: "F&B", headline: "A dining experience online", sub: "Reservations made effortless",
-  },
-  {
-    name: "Real Estate App", href: "#",
-    bg: "from-teal-950 to-zinc-900", accent: "bg-teal-400",
-    tag: "Property", headline: "Find your perfect space", sub: "Thousands of listings, one search",
-  },
 ];
 
 export default function Home() {
