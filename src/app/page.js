@@ -1,7 +1,16 @@
 import Footer from "./components/Footer";
-import ScrollCards from "./components/ScrollCards";
+import WorkGrid from "./components/WorkGrid";
 
-const clientsRowOne = [
+const projects = [
+  {
+    name: "SisoPrint",
+    href: "/work/sisoprint",
+    cover: "/projects/sisoprint/01-homepage.png",
+    url: "sisoprint.com",
+    accentColor: "#60a5fa",
+    tag: "Print Service Platform",
+    sub: "Online printing, simplified — order, upload artwork, and track deliveries.",
+  },
   {
     name: "E-Commerce Store", href: "#",
     bg: "from-indigo-950 to-slate-900", accent: "bg-indigo-500",
@@ -27,9 +36,6 @@ const clientsRowOne = [
     bg: "from-rose-950 to-zinc-900", accent: "bg-rose-400",
     tag: "Content", headline: "Stories worth reading", sub: "Clean, readable, and fast",
   },
-];
-
-const clientsRowTwo = [
   {
     name: "Portfolio Site", href: "#",
     bg: "from-amber-950 to-zinc-900", accent: "bg-amber-400",
@@ -44,16 +50,6 @@ const clientsRowTwo = [
     name: "Real Estate App", href: "#",
     bg: "from-teal-950 to-zinc-900", accent: "bg-teal-400",
     tag: "Property", headline: "Find your perfect space", sub: "Thousands of listings, one search",
-  },
-  {
-    name: "Fitness Tracker", href: "#",
-    bg: "from-lime-950 to-zinc-900", accent: "bg-lime-400",
-    tag: "Health", headline: "Your progress, visualised", sub: "Train smarter, not harder",
-  },
-  {
-    name: "Agency Website", href: "#",
-    bg: "from-fuchsia-950 to-zinc-900", accent: "bg-fuchsia-400",
-    tag: "Creative", headline: "Bold ideas. Real results.", sub: "We build brands that last",
   },
 ];
 
@@ -133,7 +129,7 @@ export default function Home() {
 
       <section
         id="branding"
-        className="relative -mt-[24vh] flex w-full max-w-[100vw] flex-col overflow-hidden pb-40 pt-20 antialiased lg:-mt-[30vh] lg:pt-40"
+        className="relative -mt-[24vh] flex w-full max-w-[100vw] flex-col pb-40 pt-20 antialiased lg:-mt-[30vh] lg:pt-40"
       >
         <div className="relative top-20 w-full bg-gradient-to-t from-transparent from-[1%] via-black to-[99%] pb-40 pt-20 md:pb-80 md:pt-40 lg:top-60">
           <div className="mx-auto max-w-7xl px-8 md:px-20">
@@ -156,11 +152,11 @@ export default function Home() {
           </div>
         </div>
 
-        <ScrollCards rowOne={clientsRowOne} rowTwo={clientsRowTwo} />
+        <WorkGrid projects={projects} />
       </section>
 
       <div className="relative bg-gradient-to-b from-transparent via-zinc-950/80 to-zinc-950">
-      <section className="isolate mx-auto mt-4 w-full max-w-7xl px-8 pb-16 pt-8 text-center md:text-left">
+      <section className="isolate mx-auto mt-4 w-full max-w-7xl px-8 pb-16 pt-8 text-center md:px-20 md:text-left">
         <h1 className="text-5xl font-bold text-white md:text-7xl">
           Crafted to fit your vision,
           <br />
